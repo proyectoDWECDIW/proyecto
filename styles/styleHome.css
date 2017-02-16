@@ -1,0 +1,184 @@
+/********** Base styles **********/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar{
+  padding: 15px;
+  padding-bottom: 0px;
+
+}
+
+.logo{
+  max-width: 10%;
+
+}
+.navbar-header{
+  width: 100%
+}
+.menu {
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+}
+
+.menu li {
+    float: left;
+    list-style-type: none;
+    width: 30%;
+		border-radius: 9%;
+
+
+
+}
+
+.menu li a {
+		transition-property: all;
+		transition-duration: 0.5s;
+		transition-timing-function: ease;
+		transition-delay: 0.2s;
+		border-radius: 9%;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family:
+
+
+
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu li a:hover {
+    background-color: #111;
+
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+		outline-color:black;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 15%;
+}
+
+#cabecera{
+  color: green;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+
+}
+
+
+
+.title_salmon a{
+  color:black;
+}
+.title_sand a{
+  color:black;
+}
+.title_red a{
+  color:white;
+}
+
+li:hover {
+  background: grey;
+  border:0.5px solid ;
+}
+
+li a{
+  color:black;
+}
+
+li a:hover{
+  color:white;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75em;
+}
+
+h2 {
+  float: right;
+  border: 1px solid black;
+  width: 186px;
+  text-align: center;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+
+p {
+  clear: both;
+  background-color: #ABABAB;
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+
+
+.cell{
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 20px;
+padding-bottom: 5px;
+background-color: #ABABAB;
+border: 1px solid black;
+}
+
+/*There are three classes of title: one for each color*/
+.title_red{
+  background-color: #FE2E2E;
+  color: white;
+}
+
+.title_salmon{
+  background-color: #F79F81;
+}
+
+.title_sand{
+  background-color: #F5DA81;
+}
