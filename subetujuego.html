@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sube tu juego</title>
+    <script src="scriptSubeTuJuego.js" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|VT323" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -13,10 +14,10 @@
   </head>
   <body>
     <center><h1>SUBE TU JUEGO</h1></center>
-    <form action="" method="post">
+    <form action="" method="post" >
       <fieldset class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <legend>Info sobre el juego</legend>
-      <label for="nombre">Nombre del juego: </label><input type="text" name="nombre" id="nombre"  placeholder="Dime el nombre del juego" ><br><br>
+      <label for="nombre">Nombre del juego: </label><input type="text" name="nombre" id="nombre"  class="validacion" placeholder=" Nombre del juego" ><br><br>
       <label>Genero</label><select class="genero" name="genero">
         <option value="">Selecciona</option>
         <option value="accion">Accion</option>
@@ -27,25 +28,25 @@
         <option value="otro">Otro</option>
       </select><br><br>
       <label for="descripcion">Descripcion del juego:</label><br>
-      <textarea name="area" rows="4" cols="30" id="descripcion" placeholder="Motivo...."></textarea><br><br>
+      <textarea name="area" rows="4" cols="30" id="descripcion" class="validacion" placeholder=" Motivo...."></textarea><br><br>
 
       </fieldset>
 
       <fieldset class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <legend>Requisitos Minimos</legend>
-        <label for="cpuM">CPU: </label><input type="text" name="cpuM" id="cpuM" placeholder="Modelo de procesador"><br><br>
-        <label for="ramM">RAM: </label><input type="text" name="ramM" id="ramM" placeholder="Ram"><br><br>
-        <label for="gpuM">GPU: </label><input type="text" name="gpuM" id="gpuM" placeholder="Tarjeta Grafica"><br><br>
-        <label for="hddM">HDD: </label><input type="text" name="hddM" id="hddM" placeholder="Disco duro"><br><br>
-        <label for="archivo">Caratula </label><input name="imagen" type="file" id="archivo" /><br><br>
-
+        <label for="cpuM">CPU: </label><input type="text" name="cpuM" id="cpuM" class="validacion"  placeholder=" Modelo de procesador"><br><br>
+        <label for="ramM">RAM: </label><input type="text" name="ramM" id="ramM" class="validacion" placeholder=" Ram"><br><br>
+        <label for="gpuM">GPU: </label><input type="text" name="gpuM" id="gpuM" class="validacion"  placeholder=" Tarjeta Grafica"><br><br>
+        <label for="hddM">HDD: </label><input type="text" name="hddM" id="hddM" class="validacion"  placeholder=" Disco duro"><br><br>
+        <label for="archivo">Caratula </label><input name="imagen" type="file" class="validacion"  id="archivo" /><br>
+        <input type="submit" id="comprobar"><br><br>
       </fieldset>
         <fieldset class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <legend>Requisitos Recomendados</legend>
-      <label for="cpuR">CPU: </label><input type="text" name="cpuR" id="cpuR" placeholder="Modelo de procesador"><br><br>
-      <label for="ramR">RAM: </label><input type="text" name="ramR" id="ramR" placeholder="Ram"><br><br>
-      <label for="gpuR">GPU: </label><input type="text" name="gpuR" id="gpuR" placeholder="Tarjeta Grafica"><br><br>
-      <label for="hddR">HDD: </label><input type="text" name="hddR" id="hddR" placeholder="Disco duro"><br><br>
+      <label for="cpuR">CPU: </label><input type="text" name="cpuR" class="validacion" id="cpuR" placeholder=" Modelo de procesador"><br><br>
+      <label for="ramR">RAM: </label><input type="text" name="ramR" class="validacion" id="ramR" placeholder=" Ram"><br><br>
+      <label for="gpuR">GPU: </label><input type="text" name="gpuR" class="validacion" id="gpuR" placeholder=" Tarjeta Grafica"><br><br>
+      <label for="hddR">HDD: </label><input type="text" name="hddR" class="validacion" id="hddR" placeholder=" Disco duro"><br><br>
       </fieldset>
 
     </form>
