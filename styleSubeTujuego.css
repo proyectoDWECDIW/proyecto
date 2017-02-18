@@ -8,6 +8,8 @@ input[type="text"],textarea{
   border-radius: 15%;
   border-color:#7197D2;
 }
-.error{
-  border-color: red;
+
+label {
+  width: 27%;
+  float: left;
 }

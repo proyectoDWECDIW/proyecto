@@ -113,7 +113,7 @@ comprobar.onclick = function(e){
     $(".error").css("border-color","red");
   }
   if (ret){
-    errList = "Tu petición se ha enviado correctamente";
+    errList2 = "Tu petición se ha enviado correctamente";
     err.style.color="blue";
     err2.style.color="blue";
     err3.style.color="blue";
