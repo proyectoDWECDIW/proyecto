@@ -1,0 +1,131 @@
+/********** Base styles **********/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body{
+	font-family: 'Amatic SC', cursive;
+  font-family: 'VT323', monospace;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-header .navbar-toggle{
+	background-color: black;
+}
+
+
+
+.navbar{
+
+
+	background-color: 	#f2f2f2;
+  border: none;
+}
+
+.logo{
+
+  max-width: 7%;
+	clear:left;
+	float: left;
+}
+h1#titulo{
+	float: left;
+	clear: right;
+	padding-top: 1%;
+	padding-left: 1%;
+	font-size: 2em;
+	color: black;
+}
+.navbar-header{
+  width: 100%
+}
+
+.nav{
+
+	width: 100%;
+
+
+}
+.search{
+	float: right;
+	margin-right: 15%;
+}
+
+.nav li{
+ width: 20%;
+ border-radius: 9%;
+ border: none;
+ margin-left: 1%;
+
+
+}
+.nav li a{
+	color: black;
+
+	border-radius: 9%;
+	font-size: 2em;
+	text-transform: capitalize;
+	text-align: center;
+	border: none;
+	transition-property: all;
+    transition-duration: 350ms;
+    transition-timing-function: ease-out;
+    transition-delay: 20ms;
+
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+.nav li a:hover{
+	background-color:black;
+    color: white;
+
+
+}
+input[type=text] {
+		margin-left: 1%;
+		border-radius: 9%;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+		outline-color:black;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 15%;
+}
+h1{
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	color: black;
+}
+.fondo{
+	background-color: #00b8e6;
+}
+.container{
+	background-color: white;
+}
