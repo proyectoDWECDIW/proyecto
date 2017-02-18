@@ -47,7 +47,6 @@ comprobar.onclick = function(e){
       ret = false;
       $("#genero").addClass("error");
       $(".error").css("border-color","red");
-
   }
   //Valida descripcion del juego
   var cogeDescr=descripcion.value;
@@ -84,6 +83,17 @@ comprobar.onclick = function(e){
     ret = false;
     $("#hddM").addClass("error");
     $(".error").css("border-color","red");
+  }
+  //Validacion Caratula
+  var cogeCaratula=archivo.value.length;
+  if(cogeCaratula==0){
+    errList2 += "Tienes que enviar una caratula<br/>";
+    ret = false;
+  }
+  //Validar que sea una imagen
+  if(cogeCaratula==0|| !$('#archivo').val().match(/.(jpg)|(JPEG)$/)) {
+    errList2 += "No has puesto un archivo imagen<br/>";
+    ret = false;
   }
   //Valida Cpu requisitos Recomendados
   var cogecpuR=cpuR.value;

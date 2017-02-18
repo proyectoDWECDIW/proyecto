@@ -9,6 +9,10 @@ input[type="text"],textarea{
   border-color:#7197D2;
 }
 
+input[type="text"]:focus{
+  border-color: #01F52E;
+}
+
 label {
   width: 27%;
   float: left;
