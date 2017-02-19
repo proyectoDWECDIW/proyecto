@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sube tu juego</title>
+    <script src="scriptSubeTuJuego.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styleSubeTujuego.css">
+  </head>
+  <body>
+    <center><h1>SUBE TU JUEGO</h1></center>
+    <form action="" method="post" id="myForm">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      </div>
+      <fieldset class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <legend>Info sobre el juego</legend>
+      <label for="nombre">Nombre juego: </label><input type="text" name="nombre" id="nombre" class="validacion" placeholder=" Nombre del juego" ><br><br>
+      <label>Genero</label><select class="genero" name="genero" id="genero">
+        <option value="">Selecciona</option>
+        <option value="accion">Accion</option>
+        <option value="deportes">Deportes</option>
+        <option value="conduccion">Conduccion</option>
+        <option value="rpg">RPG</option>
+        <option value="aventuras">Aventuras</option>
+        <option value="otro">Otro</option>
+      </select><br><br>
+      <label for="descripcion">Descripcion del juego:</label><br>
+      <textarea name="area" rows="4" cols="30" id="descripcion" class="validacion" placeholder=" Descripcion del juego..."></textarea><br><br><br>
+      <div class="errores"></div>
+      </fieldset>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      </div>
+      <fieldset  class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <legend>Requisitos Minimos</legend>
+        <label for="cpuM">CPU: </label><input type="text" name="cpuM" id="cpuM" class="validacion"  placeholder=" Modelo de procesador"><br><br>
+        <label for="ramM">RAM: </label><input type="text" name="ramM" id="ramM" class="validacion" placeholder=" Ram"><br><br>
+        <label for="gpuM">GPU: </label><input type="text" name="gpuM" id="gpuM" class="validacion"  placeholder=" Tarjeta Grafica"><br><br>
+        <label for="hddM">HDD: </label><input type="text" name="hddM" id="hddM" class="validacion"  placeholder=" Disco duro"><br><br>
+        <label for="archivo">Caratula </label><input name="imagen" type="file" class="validacion"  id="archivo" /><br>
+        <div class="errores2"></div><br>
+      </fieldset>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      </div>
+        <fieldset  class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <legend>Requisitos Recomendados</legend>
+      <label for="cpuR">CPU: </label><input type="text" name="cpuR" class="validacion" id="cpuR" placeholder=" Modelo de procesador"><br><br>
+      <label for="ramR">RAM: </label><input type="text" name="ramR" class="validacion" id="ramR" placeholder=" Ram"><br><br>
+      <label for="gpuR">GPU: </label><input type="text" name="gpuR" class="validacion" id="gpuR" placeholder=" Tarjeta Grafica"><br><br>
+      <label for="hddR">HDD: </label><input type="text" name="hddR" class="validacion" id="hddR" placeholder=" Disco duro"><br><br>
+      <div class="errores3"></div><br>
+      <input type="submit" id="comprobar"><br><br>
+      </fieldset>
+    </form>
+  </body>
+</html>

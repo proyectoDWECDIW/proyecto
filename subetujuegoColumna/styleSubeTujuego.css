@@ -1,0 +1,30 @@
+body{
+  font-family: 'Amatic SC', cursive;
+  font-family: 'VT323', monospace;
+  font-size: 2.300em;
+}
+
+textarea{
+  max-width: 50%;
+  max-height: 500px;
+}
+
+input[type="text"],textarea{
+  border-radius: 15%;
+  border-color:#7197D2;
+}
+
+input[type="text"]:focus,textarea:focus{
+  border-color: #01F52E;
+  outline: none;
+}
+
+legend{
+  margin-left: 20%;
+  font-size: 1.7em;
+}
+
+label {
+  width: 27%;
+  float: left;
+}
