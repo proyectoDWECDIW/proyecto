@@ -1,0 +1,43 @@
+body{
+  font-size: 3em;
+}
+
+textarea{
+  max-width: 50%;
+  max-height: 500px;
+}
+
+input[type="text"],textarea{
+
+  border-color:#7197D2;
+}
+
+.arch {
+  margin-left: -20px;
+}
+
+legend{
+  font-family: 'Amatic SC', cursive;
+  font-family: 'VT323', monospace;
+
+  font-size: 1.7em;
+}
+
+label {
+  font-family: 'Amatic SC', cursive;
+  font-family: 'VT323', monospace;
+
+  width: 27%;
+  float: left;
+}
+
+.nav li a{
+  font-size: 1em;
+}
+.footer{
+  font-size: 14px;
+}
+
+#comprobar {
+  font-size: 21px;
+}

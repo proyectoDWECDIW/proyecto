@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="slider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|VT323" rel="stylesheet">
+
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css?x25758" rel="stylesheet">
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="slider/flexslider.css">
+    <script type="text/javascript" src="slider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+
+    <h1>Juegos destacados del mes</h1>
+    <legend></legend>
+    <div class="flexslider">
+      <ul class="slides">
+        <li><img class="imgslide" src="resident.jpg"/></li>
+
+        <li><img class="imgslide" src="forhonor.jpg"/></li>
+
+        <li><img class="imgslide" src="nioh.png"/></li>
+      </ul>
+    </div>
+    <h1>Que ofrecemos</h1>
+    <legend></legend>
+
+    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info"> -->
+    <div class="info">
+      <div class="container-fluid">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info2">
+          <div class=" celda">
+            <img class="infoimage" src="info.png" alt="">
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p>Damos información sobre <br> los videojuegos más actuales del mercado <br> para aquellos  usuarios que quieran saber <br> más acerca de su próxima compra.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info2">
+          <div class="celda">
+            <img class="infoimage" src="plus.png" alt="">
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p>Añade información a la página <br> subiendo  un juego nuevo gracias <br> a nuestro formulario.</p>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
+            <div>
+
+              <h1 id="encuesta"><img class="encuesta" src="encuesta.png" alt=""> Elige tu juego favorito del mes</h1>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 encuesta2">
+          <p id="info">El juego que elijas sera posteriormente añadido a la página <br> clasificado  en una de nuestras categorias.</p>
+          <form class="" action="" method="post" id="formulario">
+            <input class="iform" type="radio" name="destacado" id="nioh" value="nioh"><label for="nioh" class="formulario">Nioh</label>
+            <br/>
+            <input class="iform" type="radio" name="destacado" id="forhonor" value="forhonor"><label for="forhonor" class="formulario">For Honor</label>
+            <br/>
+            <input class="iform" type="radio" name="destacado" id="resident" value="resident"><label for="resident" class="formulario">Resident Evil 7:Biohazard</label>
+            <br/>
+            <input class="iform btn btn-info" type="submit" name="" value="Enviar">
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <legend></legend>
+      <script type="text/javascript">
+      $('.flexslider').flexslider({
+          controlsContainer: '.flex-container'
+      });
+      </script>
+  </body>
+</html>

@@ -4,41 +4,89 @@
 <head>
   <meta charset="utf-8">
   <title>Proyecto</title>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="crossorigin="anonymous"></script> -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
   <script src="script.js" charset="utf-8"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|VT323" rel="stylesheet">
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css?x25758" rel="stylesheet">
   <link rel="stylesheet" href="styleHome.css">
   <link rel="stylesheet" href="slider/flexslider.css">
   <script type="text/javascript" src="slider/jquery.flexslider-min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
       $('.flexslider').flexslider({
           controlsContainer: '.flex-container'
       });
+      $('.nav a').on('click', function(e){
+				//evitamos que el enlace funcione:
+				e.preventDefault();
+				//obtenemos de href las variables url y title
+				var url = $(e.target).attr("href") + ".html";
+				var	title = $(e.target).text();
+				//cambiamos el historial subiendo el estado correspondiente a la url que hemos obtenido en el enlace
+				history.pushState({
+					url: url,
+					title: title
+				}, title, url);
+				document.title = title;
+
+				//hacemos una petición Ajax del contenido
+				$("#contenedor").load(url);
+				//cambiamos los estilos del menu
+				//quitamos los enlaces pulsados
+				$(".pulsado").removeClass("pulsado");
+				//dejamos pulsado el enlace seleccionado
+				var enlace = url.slice(0,-5);//quitamos ".html"
+				$("li:has(a[href='" + enlace + "'])").addClass("pulsado");
+			});
+			$(window).on('popstate', function (e) {
+				//obtenemos el valor de state del evento
+				var state = e.originalEvent.state;
+
+				if (state == null) {
+					document.title = 'Home';
+					$("#contenedor").empty();
+					//quitamos los enlaces pulsados
+					$(".pulsado").removeClass("pulsado");
+				} else {
+					document.title = state.title;
+					var url = state.url;
+					$("#contenedor").load(url);
+					var enlace = url.slice(0,-5);//quitamos ".html"
+					//Cambiamos los estilos:
+					//quitamos los enlaces pulsados
+					$(".pulsado").removeClass("pulsado");
+					//ponemos el estilo del enlace pulsado
+					$("li:has(a[href='" + enlace + "'])").addClass("pulsado");
+				}
+			});
     });
   </script>
 
 </head>
-<body>
-  <nav class="navbar ">
+<body class="upload">
+  <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a  href="#"><img  class="logo" src="logo.png"></a>
+      <a href="#"><img  class="logo" src="logo.png"></a>
       <h1 id="titulo">InfoGames</h1>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav ">
-        <li ><a href="#">Home</a></li>
-        <li ><a href="#">Sube tu juego</a></li>
-        <li ><a href="#">Géneros</a></li>
-        <input class="search" type="text" name="search" placeholder="Search..">
+      <ul class="nav navbar-nav">
+        <li class="menu" id="home"><a href="homeContainer">Home</a></li>
+        <li class="menu" id="sube"><a href="subetujuego">Sube tu juego</a></li>
+        <li class="menu" ><a href="generos">Géneros</a></li>
+        <li><input class="search " type="text" name="search" placeholder="Busca un juego"></li>
       </ul>
 
 
@@ -47,19 +95,91 @@
 </nav><!-- /.container-fluid -->
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fondo">
-  <div class="container">
-      <h1>Juegos destacados del mes</h1>
-      <div class="flexslider">
-        <ul class="slides">
-          <li><img class="imgslide" src="resident.jpg"/></li>
 
-          <li><img class="imgslide" src="forhonor.jpg"/></li>
+    <section class="container">
+      <div id="contenedor">
+        <h1>Juegos destacados del mes</h1>
+        <legend></legend>
+        <div class="flexslider">
+          <ul class="slides">
+            <li><img class="imgslide" src="resident.jpg"/></li>
 
-          <li><img class="imgslide" src="nioh.png"/></li>
-        </ul>
+            <li><img class="imgslide" src="forhonor.jpg"/></li>
+
+            <li><img class="imgslide" src="nioh.png"/></li>
+          </ul>
+        </div>
+        <h1>Que ofrecemos</h1>
+        <legend></legend>
+
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info"> -->
+        <div class="info">
+          <div class="container-fluid">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info2">
+              <div class=" celda">
+                <img class="infoimage" src="info.png" alt="">
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p>Damos información sobre <br> los videojuegos más actuales del mercado <br> para aquellos  usuarios que quieran saber <br> más acerca de su próxima compra.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 info2">
+              <div class="celda">
+                <img class="infoimage" src="plus.png" alt="">
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p>Añade información a la página <br> subiendo  un juego nuevo gracias <br> a nuestro formulario.</p>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " >
+                <div>
+
+                  <h1 id="encuesta"><img class="encuesta" src="encuesta.png" alt=""> Elige tu juego favorito del mes</h1>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 encuesta2">
+              <p id="info">El juego que elijas sera posteriormente añadido a la página <br> clasificado  en una de nuestras categorias.</p>
+              <form class="" action="" method="post" id="formulario">
+                <input class="iform" type="radio" name="destacado" id="nioh" value="nioh"><label for="nioh" class="formulario">Nioh</label>
+                <br/>
+                <input class="iform" type="radio" name="destacado" id="forhonor" value="forhonor"><label for="forhonor" class="formulario">For Honor</label>
+                <br/>
+                <input class="iform" type="radio" name="destacado" id="resident" value="resident"><label for="resident" class="formulario">Resident Evil 7:Biohazard</label>
+                <br/>
+                <input class="iform btn btn-info" type="submit" name="" value="Enviar">
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <legend></legend>
       </div>
-      <h1>Que ofrecemos</h1>
+
+        </section>
+
+
+
   </div>
+
+  <footer >
+    <div class="continer-fluid">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer" >
+        <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+        <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+      </div>
+    </div>
+
+
+  </footer>
 </div>
 
 
