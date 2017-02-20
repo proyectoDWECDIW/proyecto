@@ -46,11 +46,15 @@
 			});
 			$(window).on('popstate', function (e) {
 				//obtenemos el valor de state del evento
+        console.log("hola");
 				var state = e.originalEvent.state;
 
 				if (state == null) {
+          console.log("hola");
+
+
 					document.title = 'Home';
-					$("#contenedor").empty();
+					$("#contenedor").load("homeContainer.html");
 					//quitamos los enlaces pulsados
 					$(".pulsado").removeClass("pulsado");
 				} else {

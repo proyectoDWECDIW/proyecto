@@ -1,6 +1,8 @@
 onload = function(){
 var formulario = document.forms[0];
+
 comprobar.onclick = function(e){
+  console.log(e);
   e.preventDefault();
   //Errores 1
   var err = document.getElementsByClassName('errores')[0];
@@ -137,6 +139,7 @@ comprobar.onclick = function(e){
   err2.innerHTML = errList2;
   err3.innerHTML = errList3;
   return ret;
+
 }
 
 // Parte de Raul:

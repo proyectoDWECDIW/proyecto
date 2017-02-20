@@ -284,9 +284,9 @@ footer i {
     font-size: 2em;
     background:#00aced
 }
-.google-plus {
-    font-size: 1em;
-    background:#dd4b39
+.fa-google-plus {
+    font-size: 2em;
+    background:#dd4b39;
 }
 footer i:hover {
     opacity: .7;
