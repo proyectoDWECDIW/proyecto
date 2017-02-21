@@ -19,7 +19,7 @@ function listaJuegos(e) {
 
 function gestionarDatos(){
   if (xhr.readyState == 4 && xhr.status == 200) {
-    texto.innerText = xhr.responseText;
+    textoGeneros.innerText = xhr.responseText;
   }else if(xhr.readyState == 4 && xhr.status != 200) {
     var str = "Se ha producido el error: " + xhr.status;
     str += "\n " + xhr.statusText;
@@ -32,8 +32,7 @@ function listaGeneros (e){
   $("img.imagenGeneros").removeClass("oculto");
   $("p.pGeneros").removeClass("oculto");
   $("img.listaJuegos").addClass("oculto");
-  $("p#texto").addClass("oculto");
-  $("button.volver").addClass("oculto");
+  $("p#textoGeneros").empty();
   $(document.getElementById(e.target.id)).attr("onclick", "listaJuegos(event);");
   $(document.getElementById(e.target.id)).parent().parent().css({left: "initial", position: "initial"});
 }
