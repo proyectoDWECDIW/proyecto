@@ -4,7 +4,7 @@
   padding: 0px;
 }
 
-div.titulo{
+div.tituloGeneros{
   background-color: white;
   width: 100%;
   text-align: center;
@@ -12,7 +12,6 @@ div.titulo{
 }
 
 h1 {
-  font-weight: bolder;
   font-size: 3em;
 }
 
@@ -22,14 +21,14 @@ h1 {
   margin-right: 10%;
 }
 
-.celda {
+.celdaGeneros {
   width: 20%;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
 }
 
-div img {
+div img.imagenGeneros {
   background-color: lightgray;
   padding: 10%;
   width: 100%;
@@ -39,47 +38,47 @@ div img {
 
 
 
-a p {
+a.enlacesGeneros p {
   visibility: hidden;
 }
 
-a:hover p {
+a.enlacesGeneros:hover p {
+  margin-left: 40%;
   animation-duration: 2s;
   animation-name: slidein;
   visibility: visible;
 }
 
-a:hover img {
+a.enlacesGeneros:hover img.imagenGeneros {
   border: 5px solid black;
 }
 
 @keyframes slidein {
   from {
-    margin-left: 20%;
+    margin-left: 50%;
     width: 100%
   }
 
   to {
-    margin-left: 18%;
+    margin-left: 45%;
     width: 50%;
   }
 }
 
-a{
+a.enlacesGeneros{
   color: black;
 }
 
-a:hover {
+a.enlacesGeneros:hover {
   text-decoration: none;
   color: black;
 }
 
-body{
+body.bodyGeneros{
   font-family: 'Amatic SC', cursive;
   font-family: 'VT323', monospace;
   font-size: 2em;
   text-align: center;
-  font-weight: bolder;
 }
 
 .oculto {

@@ -1,10 +1,16 @@
 function listaJuegos(e) {
-  var miE = e.target;
-  console.log(miE);
-  $("img").addClass("oculto");
-  $("p").addClass("oculto");
-  miE.style.display = "inline-block";
+  $("img.imagenGeneros").addClass("oculto");
+  $("p.pGeneros").addClass("oculto");
+  $(document.getElementById(e.target.id)).removeClass("oculto");
+  var fotoGenero=$(document.createElement("img")).attr("style", "width:75%;").attr("src", e.target.id + ".png").attr("class", "listaJuegos");
+  $("body.bodyGeneros").append(fotoGenero);
+  $(document.getElementById(e.target.id)).attr("onclick", "listaGeneros(event);");
+}
 
-  var fotoGenero=$(document.createElement("img")).attr("style", "width:75%;").attr("src", e.target.id + ".png");
-  $("body").append(fotoGenero);
+function listaGeneros (e){
+  $("img.imagenGeneros").removeClass("oculto");
+  $("p.pGeneros").removeClass("oculto");
+  $("img.listaJuegos").addClass("oculto");
+  $("button.volver").addClass("oculto");
+  $(document.getElementById(e.target.id)).attr("onclick", "listaJuegos(event);");
 }
