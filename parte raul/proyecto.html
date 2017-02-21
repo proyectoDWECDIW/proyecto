@@ -22,6 +22,9 @@
       $('.flexslider').flexslider({
           controlsContainer: '.flex-container'
       });
+      formulario.onsubmit=function(e){
+        e.preventDefault();
+      }
       $('.nav a').on('click', function(e){
 				//evitamos que el enlace funcione:
 				e.preventDefault();
@@ -54,7 +57,7 @@
 
 
 					document.title = 'Home';
-					$("#contenedor").load("homeContainer.html");
+
 					//quitamos los enlaces pulsados
 					$(".pulsado").removeClass("pulsado");
 				} else {
@@ -67,6 +70,7 @@
 					$(".pulsado").removeClass("pulsado");
 					//ponemos el estilo del enlace pulsado
 					$("li:has(a[href='" + enlace + "'])").addClass("pulsado");
+
 				}
 			});
     });

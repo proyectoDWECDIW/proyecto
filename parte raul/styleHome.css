@@ -146,8 +146,11 @@ h1{
 	color: black;
 }
 .fondo{
-	background-image:url("fondo2.jpg");
-	background-attachment: fixed;
+	background: url("fondo2.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 .container{
 	background-color: white;
@@ -249,7 +252,7 @@ p#info{
 
 .footer {
 
-  width: 100%;
+
   /* Set the fixed height of the footer here */
 
   background-color: #f2f2f2;
