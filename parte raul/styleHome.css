@@ -64,7 +64,7 @@ h1#titulo{
 
 	text-align: -webkit-center;
 }
-@media (max-width:691px) {
+@media (max-width:767px) {
 	.nav li{
 		width: 100% !important;
 		border: none !important;
