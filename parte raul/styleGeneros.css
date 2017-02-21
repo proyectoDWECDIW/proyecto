@@ -84,3 +84,11 @@ body.bodyGeneros{
 .oculto {
   display: none;
 }
+
+.fotos {
+  margin-top: 5%;
+}
+
+#texto {
+  margin-top: 9%;
+}
